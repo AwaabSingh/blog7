@@ -14,7 +14,7 @@ const index = ({ articles }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`http://jsonplaceholder.typicode.com/posts?_limit=20`);
+  const res = await fetch(`http://jsonplaceholder.typicode.com/posts`);
   const articles = await res.json();
 
   return {
